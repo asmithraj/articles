@@ -1,0 +1,44 @@
+// Place all the styles related to the Blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.body {
+	font-family: 'Niramit', sans-serif;
+}
+
+.form-wrapper {
+	display: flex;
+	justify-content: center;
+
+}
+
+.blog {
+	text-align: center;
+}
+
+.g-font {
+	font-family: 'Niramit', sans-serif;
+}
+
+.container {
+	width: 50%;
+	margin: 0 auto;
+}
+.color {
+	color:#1142AA;
+}
+
+.form-input input, .form-input textarea{
+	border-radius: 10px;
+}
+
+.submit-wrapper input {
+	border: 2px solid #1142AA;
+	border-radius: 10px;
+	height: 40px;
+    width: 165px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #1142AA;
+}
+

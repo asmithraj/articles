@@ -1,19 +1,37 @@
-<h1>Listing of the articles</h1>
-<%= link_to 'New article', new_article_path %>
-<table>
-	<tr>
-		<th>Title</th>
-		<th>Text</th>
-	</tr>
-	<% @articles.each do |article| %>
+<div class="container">
+	<div class="header">
+		<div class="header_title">
+			<h4>Listing of the articles</h4>
+		</div>
+	</div>
+
+	<button class="btn btn-new btn-primary"><%= link_to 'new article', new_article_path %></button>
+	<table class="blog-list">
 		<tr>
-			<td><%= article.title %></td>
-			<td><%= article.text %></td>
-			<td><%= link_to 'Show', article_path(article) %></td>
-			<td><%= link_to 'Edit', edit_article_path(article) %></td>
-			<td><%= link_to 'Destroy', article_path(article),
-              method: :delete,
-              data: { confirm: 'Are you sure to delete?' } %></td>
+			<th>Title</th>
+			<th>Content</th>
+			<th>Action</th>
 		</tr>
-	<% end %>
-</table>
+		<% @articles.each do |article| %>
+		<tr>
+			<td class="s-right"><%= article.title %></td>
+			<td class="s-both"><%= article.text %></td>
+			<td class="s-table">
+				<button class="btn btn-primary btn-action"><%= link_to 'Show', article_path(article) %></button>
+			</td>
+			<td class="s-table">
+				<button class="btn btn-warning btn-action">
+					<%= link_to 'Edit', edit_article_path(article) %>
+				</button>
+			</td>
+			<td class="s-table">
+				<button class="btn btn-danger btn-action">
+					<%= link_to 'Destroy', article_path(article),
+			method: :delete,
+			data: { confirm: 'Are you sure to delete?' } %></button></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
+
+

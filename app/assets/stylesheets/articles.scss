@@ -1,3 +1,33 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	font-family: 'Niramit', sans-serif;
+}
+.container {
+	padding-top: 20px;
+}
+.link-col{
+	color: #212529;
+}
+.link-hov:hover {
+	text-decoration: none;
+}
+.blog-list {
+	width: 100%;
+}
+.btn-action {
+	width: 90%;
+}
+.btn-new {
+	margin: 10px 0px;
+}
+.btn a {
+	color: #ffffff;
+}
+.btn a:hover {
+	text-decoration: none;
+}
+.s-table {
+	width: 100px;
+}

@@ -25,10 +25,13 @@
 				</button>
 			</td>
 			<td class="s-table">
-			<button class="btn btn-danger btn-action">
+				<button class="btn btn-danger btn-action">
 					<%= link_to 'delete', article_path(article),
-			method: :delete,
-			data: { confirm: 'Are you sure to delete?' } %></button></td>
+						method: :delete,
+						data: { confirm: 'Are you sure to delete?' } 
+					%>
+				</button>
+			</td>
 		</tr>
 		<% end %>
 	</table>

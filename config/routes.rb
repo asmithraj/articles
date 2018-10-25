@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   	resources :articles do
 	    resources :comments
     end
-    resources :categories
+    resources :categories do
+    	resources :articles
+    end
   	get 'blog/new', to: 'blog#new'
 	post 'blog/new', to: 'blog#create'
   	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

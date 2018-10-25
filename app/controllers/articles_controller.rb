@@ -43,7 +43,11 @@ class ArticlesController < ApplicationController
 	    @article.destroy
 	    redirect_to articles_path
   	end
- 
+
+  	def showcategoryarticles
+  		@category = Category.find(params[:category_id])
+ 	end
+
 	private
   		def article_params
     		params.require(:article).permit(:title, :text)

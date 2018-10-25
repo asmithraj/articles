@@ -1,0 +1,4 @@
+<h1>Category: <%= @category.name.capitalize %></h1>
+<% @category.articles.each do |article| %>
+	<p><%= link_to article.title.capitalize, article_path(article) %></p>
+<% end %>

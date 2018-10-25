@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = Article.new
+		@category = Category.all
 	end
 
 	def edit
@@ -20,17 +21,17 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
-	 
+		# @category = Category.all
 	 	if @article.save
 	 		redirect_to @article
 	 	else
-	 		render 'new'
+	 		redirect_to action: "new" 
 	 	end
 	end
 
 	def update 
 		@article = Article.find(params[:id])
-
+		# @category = Category.all
 		if @article.update(article_params)
 			redirect_to @article
 		else
@@ -43,9 +44,13 @@ class ArticlesController < ApplicationController
 	    @article.destroy
 	    redirect_to articles_path
   	end
- 
+
+  	def showcategoryarticles
+  		@category = Category.find(params[:category_id])
+ 	end
+
 	private
   		def article_params
-    		params.require(:article).permit(:title, :text)
+    		params.require(:article).permit(:title, :text, :category_id)
   		end
 end

@@ -5,9 +5,5 @@ class CreateCategories < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-   	def up
-   		create_table :distributors do |t|
-      	t.string :zipcode
-    end
   end
 end

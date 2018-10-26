@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'categories/new'
-
-  	root 'welcome#index'
+    root 'articles#index'
+  	# root 'welcome#index'
   	get 'welcome/index'
   	resources :articles do
 	    resources :comments

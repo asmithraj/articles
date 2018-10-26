@@ -72,6 +72,20 @@ body {
 	.btn {
 		/*border-radius: 24px;*/
 	}
+	.article__image {
+		max-width: 100%;
+	}
+	.article_content__wrapper {
+		padding: 6px;
+		background: #e9ecef;
+	}
+	.article__link {
+		text-decoration: none;
+		color: #332f2f
+	}
+	.action_button {
+		text-align: right;
+	}
 
 }
 

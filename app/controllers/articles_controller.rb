@@ -21,11 +21,12 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_params)
-		# @category = Category.all
+		@category = Category.all
 	 	if @article.save
 	 		redirect_to @article
 	 	else
-	 		redirect_to action: "new" 
+	 		render 'new'
+	 		# redirect_to action: "new" 
 	 	end
 	end
 

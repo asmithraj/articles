@@ -6,10 +6,6 @@
 <button class="btn btn-new btn-primary"><%= link_to 'new category', new_category_path %></button>
 
 <table class="category-list">
-	<tr>
-		<th>Category name</th>
-		<th>Action</th>
-	</tr>
 	<% @category.each do |category| %>
 		<tr>
 			<td class="s-right">

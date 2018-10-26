@@ -76,7 +76,7 @@ body {
 		max-width: 100%;
 	}
 	.article_content__wrapper {
-		padding: 6px;
+		padding: 12px;
 		background: #e9ecef;
 	}
 	.article__link {
@@ -85,6 +85,9 @@ body {
 	}
 	.action_button {
 		text-align: right;
+	}
+	.submit:hover {
+		cursor: pointer;
 	}
 
 }

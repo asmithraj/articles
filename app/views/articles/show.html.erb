@@ -1,8 +1,5 @@
 <div class="block-show">
-<!-- 	<p>
-	  <strong>Title:</strong>
-	  <%= @article.title %>
-	</p> -->
+
 	<h1 clsas="block-show_title"><%= @article.title.capitalize %></h1>
 	<div class="block-show_content">
 		<%= @article.text %>
@@ -19,9 +16,10 @@
 		<%= render 'comments/form' %>
 	</div>
 
-	 
-	<%= link_to 'edit', edit_article_path(@article) %> | <%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure to delete?' } 
-						%>
-		
+	<%= link_to 'edit', edit_article_path(@article) %> 
+	<!-- if destroy action is defined in article policy  -->
+	<% if policy(@article).destroy? %> |
+		<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure to delete?' } %>
+	<% end %>
 </div>
 

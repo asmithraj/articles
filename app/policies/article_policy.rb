@@ -1,12 +1,6 @@
 class ArticlePolicy < ApplicationPolicy
-  attr_reader :user, :article
-
-  # def initialize(user, article)
-  #   @user = user
-  #   @article = article
-  # end
-
-  def update?
+	
+  def destroy?
     user.role == "admin" 
   end
 

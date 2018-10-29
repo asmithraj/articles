@@ -33,7 +33,6 @@ class ArticlesController < ApplicationController
 
 	def update 
 		@article = Article.find(params[:id])
-		authorize @article
 		# @category = Category.all
 		if @article.update(article_params)
 			redirect_to @article
@@ -44,6 +43,7 @@ class ArticlesController < ApplicationController
 
 	def destroy
 	    @article = Article.find(params[:id])
+	    authorize @article
 	    @article.destroy
 	    redirect_to articles_path
   	end

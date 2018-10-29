@@ -20,8 +20,10 @@
 	</div>
 
 	 
-	<%= link_to 'edit', edit_article_path(@article) %> | <%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure to delete?' } 
-						%>
-		
+	<%= link_to 'edit', edit_article_path(@article) %> 
+	<!-- if destroy action is defined in article policy  -->
+	<% if policy(@article).destroy? %> |
+		<%= link_to 'delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure to delete?' } %>
+	<% end %>
 </div>
 

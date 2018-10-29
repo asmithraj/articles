@@ -6,13 +6,16 @@ Rails.application.routes.draw do
   # get 'sessions/destroy'
   # get 'dashboard/show'
   # get 'categories/new'
+  get 'welcome/index'
   resources :sessions, only: [:create]
   resources :users, only: [:new, :create]
   root 'articles#index'
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
+  get 'users', to: 'users#index'
+  patch '/users/:id', to: 'users#update', as: 'user_update'
 	# root 'welcome#index'
-	get 'welcome/index'
+	
 	resources :articles do
     resources :comments
   end

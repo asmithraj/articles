@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
-  	skip_before_action :require_valid_user!
-  	before_action :reset_session
+  	
+    # skip_before_action :require_valid_user!
+
+    def index
+      @users = User.all
+      @enum = User.roles
+      authorize @user
+    end
 
   	def new
   		@user = User.new
@@ -17,8 +23,19 @@ class UsersController < ApplicationController
   		end
   	end
 
+    def update
+      @user = User.find(params[:id])
+      # @category = Category.all
+      # authorize @user
+      if @user.update(user_params)
+        redirect_to :action => 'index'
+      else
+        render 'edit'
+      end
+    end
+
   	def user_params
-  		params.require(:user).permit(:email, :password, :password_confirmation)  		
+  		params.require(:user).permit(:email, :password, :password_confirmation, :role)  		
   	end
 
 end

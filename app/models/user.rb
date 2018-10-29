@@ -1,9 +1,5 @@
 class User < ApplicationRecord
+	has_secure_password
+	validates :email, uniqueness: true, presence: true
 	enum role: [:guest, :editor, :admin]
-
-	after_initialize do
-  		if self.new_record?
-    		self.role ||= :guest
-  		end
-	end
 end

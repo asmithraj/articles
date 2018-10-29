@@ -7,18 +7,34 @@ $link-col: #212529;
 $default-display: flex;
 $input-color: #6dccf99e;
 $form-container-width: 50%;
-
+$title-color: #2176af;
 body {
 	font-family: $font-fam;
 }
 
 .container {
+	h1 {
+		color: #2176af;
+		font-weight: bold;
+	}
+	.image-wrapper {
+		position: relative;
+	}
 	.top-nav {
 		display: $default-display;
 		justify-content: center;
 		.img-logo {
 			width: 140px;
 		}
+	}
+	.nav-bar {
+		text-align: center;
+	}
+	.user-section {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: 0px;
 	}
 	padding-top: 20px;
 
@@ -88,6 +104,12 @@ body {
 	}
 	.submit:hover {
 		cursor: pointer;
+	}
+	.session-form {
+		padding: 20px 0px 20px 0px;
+		.submit {
+			margin: 20px 0px;
+		}
 	}
 
 }

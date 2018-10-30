@@ -6,4 +6,5 @@ class ArticlePolicy < ApplicationPolicy
 
 end
 
+	
 

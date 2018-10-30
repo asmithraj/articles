@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 	include Pundit
 	protect_from_forgery with: :exception
-	before_action :require_valid_user!
+	# before_action :require_valid_user!
 
 	def current_user
 		if !session[:user_id].blank?

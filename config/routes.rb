@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy'
   get 'users', to: 'users#index'
   patch '/users/:id', to: 'users#update', as: 'user_update'
+  get '/confluence', to: 'confluences#index'
+  get '/confluence/content', to: 'confluences#getcontent'
 	# root 'welcome#index'
 	
 	resources :articles do

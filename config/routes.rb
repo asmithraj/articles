@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   patch '/users/:id', to: 'users#update', as: 'user_update'
   get '/confluence', to: 'confluences#index'
   get '/confluence/space', to: 'confluences#getspacelist'
-  get 'confluence/children', to: 'confluences#getspacechildren'
+  get 'confluence/page/:space_id', to: 'confluences#getspacepages', as: 'page'
+  get 'confluence/children/:page_id', to: 'confluences#getchildpages', as: 'child'
+  get 'confluence/content/:content_id', to: 'confluences#getviewcontent', as: 'pageview'
 	
 	resources :articles do
     resources :comments

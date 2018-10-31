@@ -56,5 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt'
 gem 'pundit'
 gem 'rest-client'
+gem 'bigdecimal'
 
 

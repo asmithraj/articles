@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def require_new
-		
+		# new method to add to
 	end
 
 end

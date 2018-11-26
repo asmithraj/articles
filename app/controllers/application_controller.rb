@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
+	def require_new
+		
+	end
+
 end
